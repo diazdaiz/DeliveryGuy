@@ -1,0 +1,14 @@
+AudioStreamPlayer2D
+TextureRect
+VBoxContainer
+ColorRect
+CanvasLayer
+AnimationPlayer
+NinePatchRect
+Label
+Container
+RichTextLabel
+Area2D
+StaticBody2D
+Node2D
+AnimatedSprite2D

@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeliveryGuyCodingTest", "DeliveryGuyCodingTest.csproj", "{FAAF12A7-E4C3-454F-877F-04254148B737}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAAF12A7-E4C3-454F-877F-04254148B737}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAAF12A7-E4C3-454F-877F-04254148B737}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAAF12A7-E4C3-454F-877F-04254148B737}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{FAAF12A7-E4C3-454F-877F-04254148B737}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{FAAF12A7-E4C3-454F-877F-04254148B737}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{FAAF12A7-E4C3-454F-877F-04254148B737}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal

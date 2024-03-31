@@ -1,0 +1,137 @@
+[gd_scene load_steps=6 format=3 uid="uid://ean5q1fn701p"]
+
+[ext_resource type="Script" path="res://Scripts/MainMenu.cs" id="1_w0n4q"]
+[ext_resource type="Texture2D" uid="uid://bwjqnjcod5g55" path="res://Sprites/UI/panel_woodPaperDetailSquare.png" id="1_ys8e3"]
+[ext_resource type="FontFile" uid="uid://bl7vjq3wu6abj" path="res://Fonts/Kenney Pixel Square.ttf" id="2_xnnwv"]
+[ext_resource type="Script" path="res://Scripts/MainMenuSoundPlayer.cs" id="4_w4k5g"]
+
+[sub_resource type="AudioStreamMP3" id="AudioStreamMP3_fxeby"]
+
+[node name="MainMenu" type="CanvasLayer"]
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.819608, 0.509804, 1)
+
+[node name="Menus" type="ColorRect" parent="Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.35
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.184314, 0.105882, 0.211765, 0.556863)
+script = ExtResource("1_w0n4q")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/Menus"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.65
+theme_override_constants/separation = 30
+
+[node name="Option1" type="NinePatchRect" parent="Background/Menus/VBoxContainer"]
+modulate = Color(1, 0.988235, 0.670588, 1)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("1_ys8e3")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 19
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+
+[node name="Label" type="Label" parent="Background/Menus/VBoxContainer/Option1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.188235, 0.188235, 0.188235, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.580392, 0.494118, 0.32549, 0.329412)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("2_xnnwv")
+theme_override_font_sizes/font_size = 52
+text = "Start"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Option2" type="NinePatchRect" parent="Background/Menus/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("1_ys8e3")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 19
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+
+[node name="Label" type="Label" parent="Background/Menus/VBoxContainer/Option2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.188235, 0.188235, 0.188235, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.580392, 0.494118, 0.32549, 0.329412)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("2_xnnwv")
+theme_override_font_sizes/font_size = 52
+text = "About
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Option3" type="NinePatchRect" parent="Background/Menus/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("1_ys8e3")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 19
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+
+[node name="Label" type="Label" parent="Background/Menus/VBoxContainer/Option3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.188235, 0.188235, 0.188235, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.580392, 0.494118, 0.32549, 0.329412)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("2_xnnwv")
+theme_override_font_sizes/font_size = 52
+text = "Quit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FadeScreen" type="ColorRect" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamMP3_fxeby")
+script = ExtResource("4_w4k5g")
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamMP3_fxeby")
+script = ExtResource("4_w4k5g")
