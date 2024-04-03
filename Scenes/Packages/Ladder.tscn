@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://bke6l27gyjrn0"]
+
+[ext_resource type="Shader" path="res://Shaders/Outline.gdshader" id="1_bdm7i"]
+[ext_resource type="Script" path="res://Scripts/Package.cs" id="2_2ritt"]
+[ext_resource type="Texture2D" uid="uid://y7vp7exgk42p" path="res://Sprites/Packages/structure-yellow-tall.png" id="3_47nys"]
+[ext_resource type="Texture2D" uid="uid://lfh3qqgid5sk" path="res://Sprites/box-small.png" id="4_vx8ux"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pk8w8"]
+shader = ExtResource("1_bdm7i")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 3.536
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vx1s4"]
+shader = ExtResource("1_bdm7i")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 2.0
+
+[node name="Ladder" type="Node2D"]
+material = SubResource("ShaderMaterial_pk8w8")
+use_parent_material = true
+scale = Vector2(0.3, 0.3)
+script = ExtResource("2_2ritt")
+
+[node name="Sticker" type="Sprite2D" parent="."]
+z_index = 13
+material = SubResource("ShaderMaterial_vx1s4")
+position = Vector2(-8.93, 4.535)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_47nys")
+flip_h = true
+
+[node name="Box" type="Sprite2D" parent="."]
+z_index = 12
+texture = ExtResource("4_vx8ux")

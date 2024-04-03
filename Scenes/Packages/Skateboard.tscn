@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://c2rvymb0mwx8c"]
+
+[ext_resource type="Shader" path="res://Shaders/Outline.gdshader" id="1_0ifou"]
+[ext_resource type="Script" path="res://Scripts/Package.cs" id="1_sw0wu"]
+[ext_resource type="Texture2D" uid="uid://bossne2hlx7j3" path="res://Sprites/Packages/skateboard.png" id="2_mgsv3"]
+[ext_resource type="Texture2D" uid="uid://lfh3qqgid5sk" path="res://Sprites/box-small.png" id="4_dsms6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pk8w8"]
+shader = ExtResource("1_0ifou")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 3.536
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vx1s4"]
+shader = ExtResource("1_0ifou")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 2.0
+
+[node name="Skateboard" type="Node2D"]
+material = SubResource("ShaderMaterial_pk8w8")
+use_parent_material = true
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_sw0wu")
+
+[node name="Sticker" type="Sprite2D" parent="."]
+z_index = 13
+material = SubResource("ShaderMaterial_vx1s4")
+position = Vector2(-8.145, 6)
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("2_mgsv3")
+
+[node name="Box" type="Sprite2D" parent="."]
+z_index = 12
+texture = ExtResource("4_dsms6")

@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://dbssw5pgrqp7s"]
+
+[ext_resource type="Shader" path="res://Shaders/Outline.gdshader" id="1_3yajx"]
+[ext_resource type="Script" path="res://Scripts/Package.cs" id="2_tkdyt"]
+[ext_resource type="Texture2D" uid="uid://bt5woimyhbfqb" path="res://Sprites/Packages/tractor.png" id="3_7cqjs"]
+[ext_resource type="Texture2D" uid="uid://lfh3qqgid5sk" path="res://Sprites/box-small.png" id="4_jmcbb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pk8w8"]
+shader = ExtResource("1_3yajx")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 3.536
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vx1s4"]
+shader = ExtResource("1_3yajx")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 2.0
+
+[node name="TractorToy" type="Node2D"]
+material = SubResource("ShaderMaterial_pk8w8")
+use_parent_material = true
+scale = Vector2(0.3, 0.3)
+script = ExtResource("2_tkdyt")
+
+[node name="Sticker" type="Sprite2D" parent="."]
+z_index = 13
+material = SubResource("ShaderMaterial_vx1s4")
+position = Vector2(-7.98, 5.225)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_7cqjs")
+
+[node name="Box" type="Sprite2D" parent="."]
+z_index = 12
+texture = ExtResource("4_jmcbb")

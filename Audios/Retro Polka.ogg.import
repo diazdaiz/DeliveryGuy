@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://khvexaa8b1sa"
+path="res://.godot/imported/Retro Polka.ogg-ab1c953b05114450943434883c3f0d0d.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audios/Retro Polka.ogg"
+dest_files=["res://.godot/imported/Retro Polka.ogg-ab1c953b05114450943434883c3f0d0d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
