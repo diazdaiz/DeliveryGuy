@@ -1664,6 +1664,7 @@ vertical_alignment = 1
 
 [node name="Control" type="Control" parent="UI"]
 layout_mode = 3
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 pivot_offset = Vector2(40.525, 0)
