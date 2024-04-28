@@ -1,5 +1,6 @@
-res://Scenes/MainMenu.tscn
-res://Shaders/Outline.gdshader
 res://Scenes/Gameplay.tscn
+res://Shaders/Outline.gdshader
+res://Scenes/MainMenu.tscn
 res://Scenes/Packages/Sushi.tscn
 res://Scenes/Packages/Chocolate.tscn
+res://Scenes/Credit.tscn
